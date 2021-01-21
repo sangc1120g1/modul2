@@ -14,10 +14,14 @@ public class MyList<E> {
         elements = Arrays.copyOf(elements,newSize);
     }
     public void add(E e){
-        if (size == elements.length){
-            ensureCapa();
+        if (size==0){
+            elements[size]=e;
+        } else {
+            if (size == elements.length){
+                ensureCapa();
+            }
+            elements[size++] = e;
         }
-        elements[size++] = e;
     }
     public E get(int i){
         if (i>=size||i<0){
