@@ -16,6 +16,7 @@ public class test {
         productManager.add(product);
         productManager.add(product1);
         productManager.add(product2);
+        productManager.sortDown();
         productManager.display();
     }
 }
